@@ -1,0 +1,1 @@
+python image_source.py --attribute $1
