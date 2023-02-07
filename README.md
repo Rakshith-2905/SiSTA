@@ -1,7 +1,7 @@
 # SiSTA: Target-Aware Generative Augmentations for Single-Shot Adaptation
 
 
-![alt text](figs\teaser.png)
+![alt text](/figs/teaser.png)
 
 
 ## Abstract
@@ -49,10 +49,10 @@ Place the datasets following the below file structure
 <ins>Reference images:</ins></br>
 To create reference images for different domains from the paper,
     `create_reference.sh <data_type> <data_path/>` 
-    
+
 ## Algorithm
  
-![alt text](figs\pipeline.png)
+![alt text](figs/pipeline.png)
 Our method has 4 major steps
 
 <ol type="a">
