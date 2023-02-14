@@ -30,7 +30,6 @@ Place the datasets following the below file structure
 │   SiSTA.yml
 │   source_adapt.sh
 │   source_train.sh
-│   split_data.sh
 │   synth_data.sh
 │   
 ├───data
@@ -116,7 +115,7 @@ We download pretrained source generators:
 - Prune-rewind: `synth_data.sh <data_type> <domain> <cls> prune-rewind`
 
 ### Source Free UDA
-To Run source free UDA follow the instructions in 'SISTA_DA\README.md' folder
+To Run source free UDA follow the instructions in 'SISTA_DA/README.md' folder
 
 
 ## Acknowledgments
