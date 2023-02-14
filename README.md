@@ -24,21 +24,58 @@ conda activate SiSTA
 Place the datasets following the below file structure
 ```bash
 ├── SISTA
-│   ├── data/
-│       ├── CelebA-HQ
-|           ├── train
-|           ├── test
-|           └── target 
-│       ├── AFHQ
-|           ├── train
-|           ├── test
-|           └── target
-│       ├── CIFAR-10
-|           ├── train
-|           ├── test
-|           └── target
-|   ├── source_train.sh
-|   ├── split_data.sh
+│   create_reference.sh
+│   finetune_GAN.sh
+│   README.md
+│   SiSTA.yml
+│   source_adapt.sh
+│   source_train.sh
+│   split_data.sh
+│   synth_data.sh
+│   
+├───data
+│   ├───AFHQ
+│   │   ├───target
+│   │   ├───test
+│   │   └───train
+│   ├───CelebA-HQ
+│   │   ├───target
+│   │   ├───test
+│   │   └───train
+│   └───CIFAR-10
+│       ├───target
+│       ├───test
+│       └───train
+│       
+├───generative_augmentation
+│   │   e4e_projection.py
+│   │   GAN_AFHQ.py
+│   │   GAN_CelebA.py
+│   │   GAN_CIFAR-10.py
+│   │   model.py
+│   │   transformations.py
+│   │   util.py
+│   │
+│   ├───data
+│   ├───e4e
+│   │
+│   ├───models
+│   └───op
+│
+└───SISTA_DA
+        celebahq_dataloader.py
+        celeba_dataloader.py
+        data_list.py
+        image_NRC_target.py
+        image_source.py
+        image_target.py
+        image_target_memo.py
+        loss.py
+        network.py
+        randconv.py
+        README.md
+        run.sh
+        utils_memo.py
 ```
 
 <ins>target images:</ins></br>
@@ -79,11 +116,8 @@ We download pretrained source generators:
 - Prune-rewind: `synth_data.sh <data_type> <domain> <cls> prune-rewind`
 
 ### Source Free UDA
-</br></br></br>
+To Run source free UDA follow the instructions in 'SISTA_DA\README.md' folder
 
-## Tables
-To reproduce the performance from table 1 - 9. </br>
- `results.sh <domain> <method>` (method in {memo_augmix, memo_randconv, SiSTA_base, SiSTA_prune_zero, SiSTA_prune_rewind}
 
 ## Acknowledgments
 This code builds upon the following codebases: [StyleGAN2 by rosalinity](https://github.com/rosinality/stylegan2-pytorch), [e4e](https://github.com/omertov/encoder4editing), [StyleGAN-NADA](https://github.com/rinongal/StyleGAN-nada), [NRC](https://github.com/Albert0147/NRC_SFDA), [MEMO](https://github.com/zhangmarvin/memo/) and [RandConv](https://github.com/wildphoton/RandConv). 

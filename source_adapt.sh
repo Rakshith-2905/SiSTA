@@ -1,0 +1,1 @@
+python SHOT/image_NRC_target.py --variant 'interp_concat' --attribute 'Smiling' --t 1
