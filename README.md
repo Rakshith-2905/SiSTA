@@ -17,13 +17,8 @@ conda activate SiSTA
 
 ## Datasets
 - [CelebA-HQ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA/CelebAMask_HQ.html) 
-    - Create the splits that was used in the paper to train the source model 
-    `split_data.sh CelebA-HQ <data_path/>` 
 - [AFHQ](https://github.com/clovaai/stargan-v2) 
-    - Follow the link to the gitpage for more instructions to download the AFHQ data 
-    `split_data.sh AFHQ <data_path/>` 
-- [CIFAR-10]() 
-    - dataset
+- [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) 
 
 
 Place the datasets following the below file structure
@@ -33,22 +28,22 @@ Place the datasets following the below file structure
 │       ├── CelebA-HQ
 |           ├── train
 |           ├── test
-|           └── referance 
+|           └── target 
 │       ├── AFHQ
 |           ├── train
 |           ├── test
-|           └── referance
+|           └── target
 │       ├── CIFAR-10
 |           ├── train
 |           ├── test
-|           └── referance
+|           └── target
 |   ├── source_train.sh
 |   ├── split_data.sh
 ```
 
-<ins>Reference images:</ins></br>
-To create reference images for different domains from the paper,
-    `create_reference.sh <data_type> <data_path/>` 
+<ins>target images:</ins></br>
+To create target images for different domains from the paper,
+    `create_reference.sh <data_path> <dst_path> <domain>` 
 
 ## Algorithm
  
@@ -79,9 +74,9 @@ We download pretrained source generators:
 - <ins>CIFAR-10 multi class classification:</ins> <br /> `finetune_GAN.sh CIFAR-10 <domain> <num_cls>` (num_cls integer from [1,10])
 
 ### Synthetic data generation
-- Base: `synth_data.sh <data_type> <domain> base`
-- Prune-zero: `synth_data.sh <data_type> <domain> prune-zero`
-- Prune-rewind: `synth_data.sh <data_type> <domain> prune-rewind`
+- Base: `synth_data.sh <data_type> <domain> <cls> base`
+- Prune-zero: `synth_data.sh <data_type> <domain> <cls> prune-zero`
+- Prune-rewind: `synth_data.sh <data_type> <domain> <cls> prune-rewind`
 
 ### Source Free UDA
 </br></br></br>
