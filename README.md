@@ -1,8 +1,8 @@
 # SiSTA: Target-Aware Generative Augmentations for Single-Shot Adaptation
 
 
-![alt text](/figs/teaser.png)
-
+![alt text](/figs/teaser1.png)
+![alt text](/figs/teaser2.png)
 
 ## Abstract
 
