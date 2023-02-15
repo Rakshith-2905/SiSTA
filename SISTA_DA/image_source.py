@@ -282,7 +282,7 @@ if __name__ == "__main__":
     parser.add_argument('--da', type=str, default='uda', choices=['uda', 'pda', 'oda'])
     parser.add_argument('--trte', type=str, default='val', choices=['full', 'val'])
     parser.add_argument('--attribute',type=str,default='Smiling')
-    parser.add_argument('--data_dir',type=str,default='/home/kowshik/generative_sfda/DATA/CelebA-HQ-split')
+    parser.add_argument('--data_dir',type=str,default='generative_sfda/DATA/CelebA-HQ-split')
    # parser.add_argument('--test_domain', type=str, default='photo')
     args = parser.parse_args()
     

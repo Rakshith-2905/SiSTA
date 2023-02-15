@@ -5,7 +5,7 @@ from torchvision import transforms
 import os
 import pandas as pd
 from torch.utils import data
-root= '/home/kowshik/DomainBed/DATA/'
+root= 'DATA/'
 train_transform =  transforms.Compose([
         transforms.RandomResizedCrop(224),
         transforms.RandomHorizontalFlip(),

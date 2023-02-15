@@ -92,7 +92,7 @@ class CelebaHQDataset(data.Dataset):
 class JOJOGanDataset(data.Dataset):
     def __init__(self,
                 domain='photo', 
-                data_dir='/home/kowshik/generative_sfda/DATA/multi_domain_interpol_gen_10K',
+                data_dir='DATA/multi_domain_interpol_gen_10K',
                 interp_weights=[0],
                 transform=None,
                 train_size=None,
@@ -135,7 +135,7 @@ class JOJOGanDataset(data.Dataset):
 class RefImgs(JOJOGanDataset): 
     def __init__(self,
                 domain='photo', 
-                data_dir='/home/kowshik/generative_sfda/DATA/ref_imgs',
+                data_dir='DATA/ref_imgs',
                 
                 transform=None,
                 train_size=None,
@@ -157,7 +157,7 @@ class RefImgs(JOJOGanDataset):
 
 class JOJOGANPruneRewind(JOJOGanDataset):
     def __init__(self, domain = 'sketch',
-                data_dir = '/home/kowshik/generative_sfda/DATA/prune_rewind',
+                data_dir = 'DATA/prune_rewind',
                 interp_weights= [0],
                 transform=None,
                 train_size=None,
@@ -213,7 +213,7 @@ class JOJOGANPruneRewind(JOJOGanDataset):
             raise ValueError(" Atleast one among prune and rewind should be specified")
 
         # now also get the JOJOGAN generated images
-        data_dir='/home/kowshik/generative_sfda/DATA/multi_domain_interpol_gen_2'
+        data_dir='DATA/multi_domain_interpol_gen_2'
         img_path=os.path.join(data_dir,domain+'_'+str(0)) 
         img_files = np.array(\
                     [os.path.join(img_path,f) for f in sorted(os.listdir(img_path)) if f.endswith('.png')]\
@@ -234,7 +234,7 @@ class JOJOGanDatasetMultipleImages(data.Dataset):
     """
     def __init__(self,
                 domain='photo', 
-                data_dir='/home/kowshik/generative_sfda/DATA/multi_domain_interpol_gen_2',
+                data_dir='DATA/multi_domain_interpol_gen_2',
                 interp_weights=[0],
                 transform=None,
                 train_size=None,

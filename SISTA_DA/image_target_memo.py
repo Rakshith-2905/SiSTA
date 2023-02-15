@@ -278,7 +278,7 @@ if __name__ == "__main__":
                         default='uda')
     parser.add_argument('--issave', type=bool, default=False)
     parser.add_argument('--attribute',type=str,default='Smiling')
-    parser.add_argument('--data_dir',type=str,default='/home/kowshik/generative_sfda/DATA/CelebA-HQ-split')
+    parser.add_argument('--data_dir',type=str,default='DATA/CelebA-HQ-split')
     parser.add_argument('--variant', type=str, default= 'prune_rewind',\
                     choices = ['interp_concat','prune_rewind','interp_mixup','direct_target'])
     parser.add_argument('--prune',type=bool,default=True)
