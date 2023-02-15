@@ -1,12 +1,12 @@
 # SiSTA: Target-Aware Generative Augmentations for Single-Shot Adaptation
 
 
-![alt text](/figs/teaser1.png)
-![alt text](/figs/teaser2.png)
-
 ## Abstract
 
 While several test-time adaptation techniques have emerged, they typically rely on synthetic toolbox data augmentations in cases of limited target data availability. We consider the challenging setting of single-shot adaptation and explore the design of augmentation strategies. We argue that augmentations utilized by existing methods are insufficient to handle large distribution shifts, and hence propose a new approach SiSTA(<ins>Si</ins>ngle-<ins>S</ins>hot <ins>T</ins>arget <ins>A</ins>ugmentations), which first fine-tunes a generative model from the source domain using a single-shot target, and then employs novel sampling strategies for curating synthetic target data. Using experiments on a variety of benchmarks, distribution shifts and image corruptions, we find that SiSTA produces significantly improved generalization over existing baselines in face attribute detection and multi-class object recognition. Furthermore, SiSTA performs competitively to models obtained by training on larger target datasets.
+
+
+![alt text](/figs/teaser.png)
 
 ## Requirements
 The requirements for the project is given as conda yml file
