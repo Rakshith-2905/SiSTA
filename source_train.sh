@@ -1,1 +1,0 @@
-python SISTA_DA/image_source.py --dataset=$1 --attribute $2
