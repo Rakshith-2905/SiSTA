@@ -67,4 +67,5 @@ experiments on a variety of benchmarks, distribution shifts and image corruption
 
 # Contact
 
-If you have any questions, please feel free to contact us via email: thopalli1@llnl.gov, rakshith.subramanyam@asu.edu, jjayaram@llnl.gov
+If you have any questions, please feel free to contact us via email: 
+thopalli1@llnl.gov, rakshith.subramanyam@asu.edu, jjayaram@llnl.gov
