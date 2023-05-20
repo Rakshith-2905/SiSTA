@@ -1,24 +1,21 @@
 # Basic Information
-title: Single-Shot Domain Adaptation via target-aware generative augmentations
+title: SiSTA:Target-Aware Generative Augmentations for Single-Shot Adaptation
 
 authors:
+  - name: Kowshik Thopalli
+    link: https://kowshikthopalli.github.io/
+    equal_contrib: true
+    affiliations: [2]
   - name: Rakshith Subramanyam
     link: https://www.example.com/rakshith
     equal_contrib: true
     affiliations: [1]
-  - name: Kowshik Thopalli
-    link: https://kowshikthopalli.github.io/
-    equal_contrib: true
-    affiliations: [1]
-  - name: Spring Berman
-    link: https://search.asu.edu/profile/1943720
-    affiliations: [2]
   - name: Pavan Turaga
     link: https://pavanturaga.com/
-    affiliations: [1, 2]
+    affiliations: [1]
   - name: Jayaraman J. Thiagarajan
     link: https://jjthiagarajan.com/
-    affiliations: [1]
+    affiliations: [2]
 
 affiliations:
   - symbol: 1
@@ -29,7 +26,7 @@ affiliations:
     link: https://www.llnl.gov/
 
 
-conference: 2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023), 
+# conference: 2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023), 
 
 # Search Engine Optimization (SEO)
 keywords: Single-Shot Domain Adaptation, Generative Augmentations, Domain Adaptation,SiSTA

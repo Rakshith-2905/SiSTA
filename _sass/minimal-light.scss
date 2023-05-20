@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 body {
   background-color: #fff;
   padding: 0px;
-  font: 16px/1.5 Crimson Pro, serif;
-  color: #595959;
+  font: 20px/1.5 'Roboto', Arial, sans-serif;
+  color: hsl(0, 0%, 35%);
   font-weight: 400;
   margin: 0;
 }
@@ -19,7 +19,8 @@ body {
   display: inline-block;
   height: 2.4rem;
   width: 2.4rem;
-  background-color: transparent;
+  // background-color: transparent;
+  background-color: #f5f5f5; /*light gray background*/
   color: #043361 !important;
   border-radius: 100%;
   text-align: center;
@@ -611,4 +612,33 @@ code {
   margin-left: 0px;
   display: none;
   font-family: monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+h1 {
+  font-size: 35px;  /* increase size of h1, adjust as needed */
+  padding-top: 20px; /* add space above h1, adjust as needed */
+  border-bottom: 2px solid lightgray; /* draws a horizontal line in light gray color */
+  padding-bottom: 10px; /* add space below h1 to separate it from the line */
+}
+
+.title {
+  font-size: 50px;  /* increase size of title, adjust as needed */
+  padding-top: 20px; /* add space above title, adjust as needed */
+  padding-bottom: 10px; /* add space below title to separate it from the line */
+  color: #043361; /* dark blue */
+}
+
+header {
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 20px;
+  width: 100%; /* Make the header span the width of the page */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+.cta-background {
+  background-color: rgb(253, 232, 202);
+  padding: 10px;
+  border-radius: 10px;
 }
