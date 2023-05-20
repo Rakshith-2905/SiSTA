@@ -55,8 +55,7 @@ experiments on a variety of benchmarks, distribution shifts and image corruption
 
 # Citation
 
-{% include add_citation.html text="
-  @INPROCEEDINGS{10096784,
+{% include add_citation.html text="@INPROCEEDINGS{10096784,
   author={Subramanyam, Rakshith and Thopalli, Kowshik and Berman, Spring and Turaga, Pavan and Thiagarajan, Jayaraman J.},
   booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
   title={Single-Shot Domain Adaptation via Target-Aware Generative Augmentations}, 
@@ -68,4 +67,4 @@ experiments on a variety of benchmarks, distribution shifts and image corruption
 
 # Contact
 
-If you have any questions, please feel free to contact us via email: rakshith.subramanyam@asu.edu
+If you have any questions, please feel free to contact us via email: thopalli1@llnl.gov, rakshith.subramanyam@asu.edu, jjayaram@llnl.gov
