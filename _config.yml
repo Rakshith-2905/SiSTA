@@ -25,6 +25,11 @@ affiliations:
     name: Lawrence Livermore National Laboratory
     link: https://www.llnl.gov/
 
+contact:
+  emails:
+    - thopalli1@llnl.gov
+    - rakshith.subramanyam@asu.edu
+    - jjayaram@llnl.gov
 
 # conference: 2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023), 
 
@@ -34,11 +39,11 @@ canonical: https://rakshithsubramanyam.github.io/
 description: This paper proposes a novel single-shot domain adaptation method that leverages target-aware generative augmentations to improve the performance of the source model on the target domain.
 
 # Links
-paper_link: ./assets/files/paper.pdf
-slides_link: https://www.linkedin.com/
-poster_link: https://www.linkedin.com/
-video_link: https://www.linkedin.com/
-github_link: https://github.com/kowshikthopalli/SISTA
+paper_link: https://arxiv.org/pdf/2305.13284.pdf
+slides_link: https://rakshith-2905.github.io/SiSTA/
+poster_link: https://rakshith-2905.github.io/SiSTA/
+video_link: https://rakshith-2905.github.io/SiSTA/
+github_link: https://github.com/Rakshith-2905/SiSTA
 
 # Images
 avatar: ./assets/img/avatar.png

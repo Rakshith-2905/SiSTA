@@ -72,7 +72,7 @@
       <div class="authors" style="display: flex; justify-content: center; flex-wrap: wrap; grid-gap: 10px;">
         {% for author in site.authors %}
         <div style="max-width: fit-content;"> <!-- Adjusted max-width property -->
-          <h2 style="font-size: 1.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> <!-- Added white-space, overflow, and text-overflow properties -->
+          <h2 style="font-size: 1.3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> <!-- Added white-space, overflow, and text-overflow properties -->
             {% if author.link %}
             <a href="{{ author.link }}">{{ author.name }}</a>
             {% else %}
@@ -93,7 +93,7 @@
         
 
       {% if site.affiliations %}
-      <div style="display: flex; justify-content: center; grid-gap: 20px;">
+      <div style="display: flex; justify-content: center; grid-gap: 10px;">
         {% for affiliation in site.affiliations %}
           <h4><a href="{{ affiliation.link }}"><sup>{{ affiliation.symbol }}</sup>{{ affiliation.name }}</a></h4>
         {% endfor %}
