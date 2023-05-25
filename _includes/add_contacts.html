@@ -1,5 +1,6 @@
-{% for email in site.contact.emails %}
-  <div>
-    <a href="mailto:{{ email }}" style="text-decoration: none; color: #333;">{{ email }}</a>
-  </div>
+{% assign emails = site.contact.emails | split: ";" %}
+{% for email in emails %}
+  <p>
+    <a href="mailto:{{ email | strip }}" style="text-decoration: none; color: #333;">{{ email | strip }}</a>
+  </p>
 {% endfor %}
