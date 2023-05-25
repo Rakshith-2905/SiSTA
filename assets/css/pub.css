@@ -20,15 +20,15 @@
 
 :root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #000000; --global-text-color-light: #828282; --global-theme-color: #00369f; --global-hover-color: #ffb81c; --global-footer-bg-color: #1c1c1c; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; }
 
-@media (prefers-color-scheme: dark) { :root { --global-theme-color: rgb(36, 150, 203);}}
+/* @media (prefers-color-scheme: dark) { :root { --global-theme-color: rgb(36, 150, 203);}} */
 
 blockquote { background: var(--global-bg-color); border-left: 2px solid var(--global-theme-color); margin: 1.5em 10px; padding: 0.5em 10px; font-size: 1.2rem; }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .affiliation, .conference {
     color: white;
   }
-}
+} */
 @media (prefers-color-scheme: light) {
   .affiliation, .conference {
     color: black;
@@ -72,10 +72,10 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .publications ol.bibliography li .links a.btn { color: #000000; border: 1px solid #000000; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 .publications ol.bibliography li .links a.btn { color: #FFFFFF; border: 1px solid #FFFFFF; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 
-  }
+  } */
 
 .publications ol.bibliography li .links a.btn:hover { color: var(--global-theme-color); border-color: var(--global-theme-color); }
 
