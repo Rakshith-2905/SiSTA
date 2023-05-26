@@ -48,6 +48,10 @@ We address the challenge of adapting models from a source domain to a target dom
     alt_text="Alt text" 
 %}
 
+{% include add_gallery.html data="gallery_1" %}
+
+
+
 # Citation
 
 {% include add_citation.html text="@INPROCEEDINGS{10096784,

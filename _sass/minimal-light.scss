@@ -280,12 +280,12 @@ h1 {
 }
 
 a {
-  color: #39c;
+  color: #069;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: rgb(0, 74, 110);
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -633,7 +633,7 @@ h1 {
   padding-top: 20px; /* add space above title, adjust as needed */
   padding-bottom: 10px; /* add space below title to separate it from the line */
   // color: #043361; /* dark blue */
-  color: rgb(62, 183, 240);
+  color: #043361;
 }
 
 header {

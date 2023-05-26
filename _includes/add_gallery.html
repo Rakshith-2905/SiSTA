@@ -1,0 +1,91 @@
+{% assign gallery_data = site.data[include.data] %}
+
+<div class="gallery">
+  <div class="main-image">
+    <img src="{{ gallery_data[0].src }}" alt="{{ gallery_data[0].alt }}" class="gallery-image" id="mainImage">
+    <p>{{ gallery_data[0].caption }}</p>
+  </div>
+  <div class="thumbnails">
+    {% for item in gallery_data %}
+      <div class="thumbnail">
+        <img src="{{ item.src }}" alt="{{ item.alt }}" class="gallery-thumbnail" onclick="changeImage('{{ item.src }}', '{{ item.caption }}')">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+function changeImage(src, caption) {
+  document.getElementById('mainImage').src = src;
+  document.querySelector('.main-image p').innerText = caption;
+}
+</script>
+
+<style>
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-image {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.gallery-image {
+  width: 100%;
+}
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  overflow-x: auto; 
+}
+.thumbnail {
+  flex: none; 
+  margin: 5px; 
+  border: 1px solid #ccc; 
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+.gallery-thumbnail {
+  width: 100px; 
+}
+
+.gallery .main-image {
+  width: 100%;  /* Adjust as necessary */
+  margin: auto;
+}
+
+.gallery .main-image .gallery-image {
+  width: 100%;  /* This will make the image take up the full width of its container */
+  height: auto;  /* This will keep the aspect ratio of the image */
+}
+
+.gallery .thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;  /* Adds a gap between thumbnails */
+}
+
+.gallery .thumbnail {
+  width: 250px;  /* Adjust as necessary */
+  height: auto;
+}
+
+.gallery .thumbnail .gallery-thumbnail {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;  /* This is for the hover effect */
+  cursor: pointer;  /* Changes the cursor to a hand when you hover over the thumbnail */
+}
+
+/* This increases the size of the thumbnail when you hover over it */
+.gallery .thumbnail:hover .gallery-thumbnail {
+  transform: scale(1.1);
+}
+
+</style>
