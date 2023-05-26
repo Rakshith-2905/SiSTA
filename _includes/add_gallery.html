@@ -16,7 +16,7 @@
 
 <script>
 var currentThumbnail = document.querySelector('.thumbnail');
-currentThumbnail.style.boxShadow = '0px 0px 10px 3px rgba(0,0,0,0.75)'; // Added this line
+currentThumbnail.style.boxShadow = '0px 0px 10px 3px rgba(0,0,0,0.75)';
 
 function changeImage(element, src, caption) {
   document.getElementById('mainImage').src = src;
@@ -94,6 +94,7 @@ function changeImage(element, src, caption) {
 .gallery .thumbnail:hover .gallery-thumbnail {
   transform: scale(1.1);
 }
+
 /* This will add a shadow to the selected thumbnail */
 .thumbnail {
   box-shadow: none; 
@@ -104,4 +105,33 @@ function changeImage(element, src, caption) {
   transform: scale(1.1);
   box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75); 
 }
+@media only screen and (max-width: 600px) {
+  .gallery .thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .gallery .thumbnail {
+    width: 100px;
+    height: auto;
+  }
+
+  /* Chrome, Safari, and Edge scrollbar styles */
+  .gallery .thumbnails::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .gallery .thumbnails::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+
+  .gallery .thumbnails::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 20px;
+  }
+}
+
 </style>
