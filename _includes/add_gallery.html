@@ -7,17 +7,24 @@
   </div>
   <div class="thumbnails">
     {% for item in gallery_data %}
-      <div class="thumbnail">
-        <img src="{{ item.src }}" alt="{{ item.alt }}" class="gallery-thumbnail" onclick="changeImage('{{ item.src }}', '{{ item.caption }}')">
+      <div class="thumbnail" onclick="changeImage(this, '{{ item.src }}', '{{ item.caption }}')">
+        <img src="{{ item.src }}" alt="{{ item.alt }}" class="gallery-thumbnail">
       </div>
     {% endfor %}
   </div>
 </div>
 
 <script>
-function changeImage(src, caption) {
+var currentThumbnail = document.querySelector('.thumbnail');
+currentThumbnail.style.boxShadow = '0px 0px 10px 3px rgba(0,0,0,0.75)'; // Added this line
+
+function changeImage(element, src, caption) {
   document.getElementById('mainImage').src = src;
   document.querySelector('.main-image p').innerText = caption;
+
+  currentThumbnail.style.boxShadow = 'none';
+  element.style.boxShadow = '0px 0px 10px 3px rgba(0,0,0,0.75)';
+  currentThumbnail = element;
 }
 </script>
 
@@ -72,7 +79,7 @@ function changeImage(src, caption) {
 }
 
 .gallery .thumbnail {
-  width: 250px;  /* Adjust as necessary */
+  width: 200px;  /* Adjust as necessary */
   height: auto;
 }
 
@@ -87,5 +94,14 @@ function changeImage(src, caption) {
 .gallery .thumbnail:hover .gallery-thumbnail {
   transform: scale(1.1);
 }
+/* This will add a shadow to the selected thumbnail */
+.thumbnail {
+  box-shadow: none; 
+}
 
+/* Adjust the hover style so that the shadow is not overridden */
+.thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75); 
+}
 </style>
