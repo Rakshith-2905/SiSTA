@@ -1,13 +1,17 @@
 {% assign gallery_data = site.data[include.data] %}
 
 <div class="gallery">
-  <div class="main-image">
-    <img src="{{ gallery_data[0].src }}" alt="{{ gallery_data[0].alt }}" class="gallery-image" id="mainImage">
-    <p>{{ gallery_data[0].caption }}</p>
+  <div class="main-display"> <!-- Add a new div here -->
+    <div id="left-arrow" class="arrow">&lt;</div>
+    <div class="main-image">
+      <img src="{{ gallery_data[0].src }}" alt="{{ gallery_data[0].alt }}" class="gallery-image" id="mainImage">
+      <p>{{ gallery_data[0].caption }}</p>
+    </div>
+    <div id="right-arrow" class="arrow">&gt;</div>
   </div>
   <div class="thumbnails">
     {% for item in gallery_data %}
-      <div class="thumbnail" onclick="changeImage(this, '{{ item.src }}', '{{ item.caption }}')">
+      <div class="thumbnail" onclick="changeImage(this, '{{ item.src }}', '{{ item.caption }}', {{ forloop.index0 }})">
         <img src="{{ item.src }}" alt="{{ item.alt }}" class="gallery-thumbnail">
       </div>
     {% endfor %}
@@ -15,17 +19,97 @@
 </div>
 
 <script>
+var gallery_data = {{ site.data[include.data] | jsonify }};
 var currentThumbnail = document.querySelector('.thumbnail');
+var currentIndex = 0; // Add this line
 currentThumbnail.style.boxShadow = '0px 0px 10px 3px rgba(0,0,0,0.75)';
 
-function changeImage(element, src, caption) {
+function changeImage(element, src, caption, index) {
   document.getElementById('mainImage').src = src;
   document.querySelector('.main-image p').innerText = caption;
-
   currentThumbnail.style.boxShadow = 'none';
   element.style.boxShadow = '0px 0px 10px 3px rgba(0,0,0,0.75)';
   currentThumbnail = element;
+  currentIndex = index; // Add this line
+  checkArrows(); // Add this line
 }
+
+function checkArrows() {
+  var leftArrow = document.getElementById('left-arrow');
+  var rightArrow = document.getElementById('right-arrow');
+  if (currentIndex === 0) {
+    leftArrow.style.display = 'none';
+  } else {
+    leftArrow.style.display = 'block';
+  }
+  if (currentIndex === gallery_data.length - 1) {
+    rightArrow.style.display = 'none';
+  } else {
+    rightArrow.style.display = 'block';
+  }
+}
+
+document.getElementById('left-arrow').addEventListener('click', function() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    changeImage(
+      document.getElementsByClassName('thumbnail')[currentIndex], 
+      gallery_data[currentIndex].src, 
+      gallery_data[currentIndex].caption, 
+      currentIndex
+    );
+  }
+});
+
+document.getElementById('right-arrow').addEventListener('click', function() {
+  if (currentIndex < gallery_data.length - 1) {
+    currentIndex++;
+    changeImage(
+      document.getElementsByClassName('thumbnail')[currentIndex], 
+      gallery_data[currentIndex].src, 
+      gallery_data[currentIndex].caption, 
+      currentIndex
+    );
+  }
+});
+
+// Swipe functionality to be added here...
+var startX = 0; // These variables will hold the initial touch
+var startY = 0; // position and the distance travelled
+
+document.getElementById('mainImage').addEventListener('touchstart', function(e) {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+}, false);
+
+document.getElementById('mainImage').addEventListener('touchend', function(e) {
+  var deltaX = e.changedTouches[0].clientX - startX;
+  var deltaY = e.changedTouches[0].clientY - startY;
+  if (Math.abs(deltaX) > Math.abs(deltaY)) { // If horizontal swipe
+    if (deltaX > 0) { // If swipe to the right
+      if (currentIndex > 0) {
+        currentIndex--;
+        changeImage(
+          document.getElementsByClassName('thumbnail')[currentIndex], 
+          gallery_data[currentIndex].src, 
+          gallery_data[currentIndex].caption, 
+          currentIndex
+        );
+      }
+    } else { // If swipe to the left
+      if (currentIndex < gallery_data.length - 1) {
+        currentIndex++;
+        changeImage(
+          document.getElementsByClassName('thumbnail')[currentIndex], 
+          gallery_data[currentIndex].src, 
+          gallery_data[currentIndex].caption, 
+          currentIndex
+        );
+      }
+    }
+  }
+}, false);
+
 </script>
 
 <style>
@@ -98,6 +182,32 @@ function changeImage(element, src, caption) {
 /* This will add a shadow to the selected thumbnail */
 .thumbnail {
   box-shadow: none; 
+}
+.main-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  line-height: 30px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+#left-arrow {
+  left: 10px;
+  display: none; 
+}
+
+#right-arrow {
+  right: 10px;
 }
 
 /* Adjust the hover style so that the shadow is not overridden */
