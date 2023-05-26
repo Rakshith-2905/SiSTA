@@ -13,7 +13,6 @@ We address the challenge of adapting models from a source domain to a target dom
     caption="Examples of synthetic data generated using SiSTA. Please follow the link by clicking the image to access additional examples for different benchmarks and distribution shifts." 
     alt_text="Alt text" 
     link="https://icml-sista.github.io/"
-    width="500"
     height="400"
 %}
 # Method
@@ -27,13 +26,12 @@ We address the challenge of adapting models from a source domain to a target dom
 <br>
 
 <div style="font-size:18px">
-  <p><strong>a) Source training:</strong> Train source classifier and generative model for the source data distribution using StyleGAN-v2.</p>
-
-  <p><strong>b) Single-shot StyleGAN finetuning:</strong> Fine-tune the source generator using a single-shot example to generate images from the target domain using the SiSTA-U strategy.</p>
-
-  <p><strong>c) Synthetic data generation:</strong> Generate a synthetic dataset by sampling in the latent space of the target generator for the target domain using SiSTA-G stragegy.</p>
-
-  <p><strong>d) Source-free UDA:</strong> Adapt the source classifier using the synthetically generated target domain data.</p>
+  <ol type="a">
+  <li><strong>Source training:</strong> Train source classifier and generative model for the source data distribution using StyleGAN-v2.</li>
+  <li><strong>Single-shot StyleGAN finetuning:</strong> Fine-tune the source generator using a single-shot example to generate images from the target domain using the SiSTA-U strategy.</li>
+  <li><strong>Synthetic data generation:</strong> Generate a synthetic dataset by sampling in the latent space of the target generator for the target domain using SiSTA-G strategy.</li>
+  <li><strong>Source-free UDA:</strong> Adapt the source classifier using the synthetically generated target domain data.</li>
+</ol>
 </div>
 
 <br>

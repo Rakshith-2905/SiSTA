@@ -61,10 +61,10 @@
     <header>
       <div class="title">{{ site.title }}</div>
 
-      <br>
+      <br />
 
       {% if site.authors %}
-      <div class="authors" style="display: flex; justify-content: center; flex-wrap: wrap; grid-gap: 10px;">
+      <div class="authors" style="display: flex; justify-content: center; flex-wrap: wrap; column-gap: 10px;">
         {% for author in site.authors %}
         <div style="max-width: fit-content;"> <!-- Adjusted max-width property -->
           <h2 style="font-size: 1.3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> <!-- Added white-space, overflow, and text-overflow properties -->
@@ -86,6 +86,7 @@
       </div>
       {% endif %}
         
+      <br />
 
       {% if site.affiliations %}
       <div style="display: flex; justify-content: center; grid-gap: 10px;">

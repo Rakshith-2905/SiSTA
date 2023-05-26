@@ -242,7 +242,7 @@ h1 {
 h2 {
   color: #043361;
   font-weight: 500;
-  margin: 2px 0px 15px;
+  margin: 2px 0px 5px;
   font-size: 157%;
 }
 
@@ -307,6 +307,7 @@ a:hover small {
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 blockquote {
@@ -324,7 +325,7 @@ pre {
 }
 
 pre {
-  max-width: 500px;
+  // max-width: 500px;
   padding: 8px 15px;
   background: #f8f8f8;
   border-radius: 5px;
@@ -374,6 +375,9 @@ header {
   -webkit-font-smoothing: subpixel-antialiased;
   padding-top: 4em;
   text-align: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header ul {
@@ -536,7 +540,7 @@ header a small {
 
 body {
   word-wrap: break-word;
-  padding: 30px;
+  padding: 20px;
 }
 
 .pub-row {
@@ -634,7 +638,7 @@ h1 {
 
 header {
   // background-color: #f2f2f2; /* Light gray background */
-  padding: 20px;
+  padding: 20px 0px;
   width: 100%; /* Make the header span the width of the page */
   box-sizing: border-box; /* Include padding in the width calculation */
 }
@@ -642,4 +646,12 @@ header {
   background-color: rgb(253, 232, 202);
   padding: 10px;
   border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .title { font-size: 30px; }
+  h2 {
+    font-size: 157%;
+  }
 }
