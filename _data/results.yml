@@ -10,6 +10,6 @@
   caption: 
   alt: "Alt text 3"
 
-- src: "assets/img/multiclass_cls_2.png"
-  caption: 
-  alt: "Alt text 4"
+# - src: "assets/img/multiclass_cls_2.png"
+#   caption: 
+#   alt: "Alt text 4"

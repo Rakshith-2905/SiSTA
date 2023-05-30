@@ -22,8 +22,6 @@ We address the challenge of adapting models from a source domain to a target dom
 %}
 
 
-<br>
-
 <div style="font-size:18px">
   <ol type="a">
   <li><strong>Source training:</strong> Train source classifier and generative model for the source data distribution using StyleGAN-v2.</li>
@@ -37,7 +35,7 @@ We address the challenge of adapting models from a source domain to a target dom
 
 {% include add_image.html 
     image="assets/img/website-fig-teaser.png"
-    caption="Examples of synthetic data generated using SiSTA. Please follow the link by clicking the image to access additional examples for different benchmarks and distribution shifts." 
+    caption="Examples of synthetic data generated using SiSTA. <strong>Please follow the link by clicking the image</strong> to access additional examples for different benchmarks and distribution shifts." 
     alt_text="Alt text" 
     link="https://icml-sista.github.io/"
     height="400"
@@ -56,7 +54,14 @@ SiSTA significantly improves generalization of face attribute detectors. Here is
 
 # Citation
 
-{% include add_citation.html text="@INPROCEEDINGS{10096784,
+{% include add_citation.html text="@INPROCEEDINGS{ICML_SISTA,
+  author={Thopalli, Kowshik and Subramanyam, Rakshith and Turaga, Pavan and Thiagarajan, Jayaraman J.},
+  booktitle={International Conference on Machine Learning}, 
+  title={Single-Shot Domain Adaptation via Target-Aware Generative Augmentations}, 
+  year={2023}}
+
+
+@INPROCEEDINGS{10096784,
   author={Subramanyam, Rakshith and Thopalli, Kowshik and Berman, Spring and Turaga, Pavan and Thiagarajan, Jayaraman J.},
   booktitle={ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
   title={Single-Shot Domain Adaptation via Target-Aware Generative Augmentations}, 
