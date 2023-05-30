@@ -62,76 +62,75 @@
       <div class="title">{{ site.title }}</div>
 
       <br />
-
-      {% if site.authors %}
-      <div class="authors" style="display: flex; justify-content: center; flex-wrap: wrap; column-gap: 10px;">
+    {% if site.authors %}
+    <div class="authors" style="display: flex; justify-content: center; flex-wrap: wrap; column-gap: 10px;">
         {% for author in site.authors %}
-        <div style="max-width: fit-content;"> <!-- Adjusted max-width property -->
-          <h2 style="font-size: 1.3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> <!-- Added white-space, overflow, and text-overflow properties -->
+        <div style="max-width: fit-content;">
+            <h2 style="font-size: 1.3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
             {% if author.link %}
-            <a href="{{ author.link }}">{{ author.name }}</a>
+            <a href="{{ author.link }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
             {% else %}
             {{ author.name }}
             {% endif %}
             {% if author.equal_contrib %}*{% endif %}
             {% if author.affiliations %}
-              {% for aff in author.affiliations %}
-                  {% assign aff_obj = site.affiliations | where:"symbol", aff | first %}
-                  <sup>{{ aff_obj.symbol }}</sup>
-              {% endfor %}
+                {% for aff in author.affiliations %}
+                {% assign aff_obj = site.affiliations | where:"symbol", aff | first %}
+                <sup>{{ aff_obj.symbol }}</sup>
+                {% endfor %}
             {% endif %}
-          </h2>
+            </h2>
         </div>
         {% endfor %}
-      </div>
-      {% endif %}
+    </div>
+    {% endif %}
         
-      <br />
+    <br />
 
-      {% if site.affiliations %}
-      <div style="display: flex; justify-content: center; grid-gap: 10px;">
+    {% if site.affiliations %}
+    <div style="display: flex; justify-content: center; grid-gap: 10px;">
         {% for affiliation in site.affiliations %}
-          <h4><a href="{{ affiliation.link }}"><sup>{{ affiliation.symbol }}</sup>{{ affiliation.name }}</a></h4>
+        <h4><a href="{{ affiliation.link }}" target="_blank" rel="noopener noreferrer"><sup>{{ affiliation.symbol }}</sup>{{ affiliation.name }}</a></h4>
         {% endfor %}
-      </div>
-      {% endif %}
-    
-      <br>
-      
-          
-      <div class="cta">
-        <div class="cta-background">
-          {% if site.paper_link %}
-          <a href="{{ site.paper_link }}">
+    </div>
+    {% endif %}
+
+    <br>
+
+    <div class="cta">
+    <div class="cta-background">
+        {% if site.paper_link %}
+        <a href="{{ site.paper_link }}" target="_blank" rel="noopener noreferrer">
             <span><i class="fa fa-file-pdf" style="margin-right: 3px;"></i>Paper</span>
-          </a>  
-          {% endif %}
-      
-          {% if site.slides_link %}
-          <a href="{{ site.slides_link }}">
+        </a>  
+        {% endif %}
+
+        {% if site.slides_link %}
+        <a href="{{ site.slides_link }}" target="_blank" rel="noopener noreferrer">
             <span><i class="fas fa-chalkboard" style="margin-right: 3px;"></i>Slides</span>
-          </a>
-          {% endif %}
-      
-          {% if site.poster_link %}
-          <a href="{{ site.poster_link }}">
+        </a>
+        {% endif %}
+
+        {% if site.poster_link %}
+        <a href="{{ site.poster_link }}" target="_blank" rel="noopener noreferrer">
             <span><i class="fas fa-file-powerpoint" style="margin-right: 3px;"></i>Poster</span>
-          </a>
-          {% endif %}
-      
-          {% if site.video_link %}
-          <a href="{{ site.video_link }}">
+        </a>
+        {% endif %}
+
+        {% if site.video_link %}
+        <a href="{{ site.video_link }}" target="_blank" rel="noopener noreferrer">
             <span><i class="fa fa-video" style="margin-right: 3px;"></i>Video</span>
-          </a>
-          {% endif %}
-      
-          {% if site.github_link %}
-          <a href="{{ site.github_link }}">
+        </a>
+        {% endif %}
+
+        {% if site.github_link %}
+        <a href="{{ site.github_link }}" target="_blank" rel="noopener noreferrer">
             <span><i class="fab fa-github" style="margin-right: 3px;"></i>Github</span>
-          </a>
-          {% endif %}
-        </div>
-      </div>
+        </a>
+        {% endif %}
+    </div>
+    </div>
+
       
 <!--       
       <div class="cta" style="font-size: 1.8rem; padding: 10px;">
