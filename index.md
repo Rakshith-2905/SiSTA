@@ -8,13 +8,11 @@ We address the challenge of adapting models from a source domain to a target dom
 
 <br>
 
-{% include add_image.html 
-    image="assets/img/website-fig-teaser.png"
-    caption="Examples of synthetic data generated using SiSTA. Please follow the link by clicking the image to access additional examples for different benchmarks and distribution shifts." 
-    alt_text="Alt text" 
-    link="https://icml-sista.github.io/"
-    height="400"
+{% include add_video.html 
+    youtube_link="https://www.youtube.com/embed/2bQwT548NFI" 
 %}
+
+
 # Method
 
 {% include add_image.html 
@@ -22,6 +20,7 @@ We address the challenge of adapting models from a source domain to a target dom
     caption="" 
     alt_text="Alt text" 
 %}
+
 
 <br>
 
@@ -36,19 +35,22 @@ We address the challenge of adapting models from a source domain to a target dom
 
 <br>
 
+{% include add_image.html 
+    image="assets/img/website-fig-teaser.png"
+    caption="Examples of synthetic data generated using SiSTA. Please follow the link by clicking the image to access additional examples for different benchmarks and distribution shifts." 
+    alt_text="Alt text" 
+    link="https://icml-sista.github.io/"
+    height="400"
+%}
+
+
 
 # Empirical Results
 
 
-{% include add_image.html 
-    image="assets/img/website-fig-result.png"
+SiSTA significantly improves generalization of face attribute detectors. Here is 1−shot SFDA performance (Accuracy %) averaged across different face attribute detection tasks, under varying levels distribution shift severity (Domains A, B & C) and a suite of image corruptions (Domain D). SiSTA consistently improves upon the SoTA baselines, and when combined with toolbox augmentations matches Full Target DA.
 
-
-    caption="SiSTA significantly improves generalization of face attribute detectors. Here is 1−shot SFDA performance (Accuracy %) averaged across different face attribute detection tasks, under varying levels distribution shift severity (Domains A, B & C) and a suite of image corruptions (Domain D). SiSTA consistently improves upon the SoTA baselines, and when combined with toolbox augmentations matches Full Target DA." 
-    alt_text="Alt text" 
-%}
-
-{% include add_gallery.html data="gallery_1" %}
+{% include add_gallery.html data="results" %}
 
 
 
