@@ -31,7 +31,6 @@ We address the challenge of adapting models from a source domain to a target dom
 </ol>
 </div>
 
-<br>
 
 {% include add_image.html 
     image="assets/img/website-fig-teaser.png"
