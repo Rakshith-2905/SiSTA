@@ -9,7 +9,7 @@ We address the challenge of adapting models from a source domain to a target dom
 <br>
 
 {% include add_video.html 
-    youtube_link="[https://www.youtube.com/embed/2bQwT548NFI](https://www.dropbox.com/s/6rm4bo8guq7qv7n/SISTA_ICML_Slideslive_record.mov?dl=0)" 
+    youtube_link="[https://www.youtube.com/embed/2fHnhz6UC8c]" 
 %}
 
 
