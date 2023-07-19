@@ -9,7 +9,7 @@ We address the challenge of adapting models from a source domain to a target dom
 <br>
 
 {% include add_video.html 
-    youtube_link="https://www.youtube.com/embed/2fHnhz6UC8c" 
+    youtube_link="https://www.youtube.com/embed/oHNaM_qXQeY" 
 %}
 
 # Method
